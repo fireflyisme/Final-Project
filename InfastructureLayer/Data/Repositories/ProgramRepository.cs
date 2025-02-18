@@ -1,6 +1,7 @@
 ﻿using DomainLayer.Models;
 using FirstProgram1.Data;
 using FirstProgram1.Data.Repositories;
+using InfastructureLayer.Data.Repositories.IRepositories;
 
 namespace InfastructureLayer.Repositories
 {
@@ -16,11 +17,6 @@ namespace InfastructureLayer.Repositories
         public void Update(Program obj)
         {
             _db.Programs.Update(obj);
-        }
-
-        public void Save()
-        {
-            _db.SaveChanges();
         }
     }
 }

@@ -2,11 +2,16 @@ using FirstProgram1.Data;
 using Unity.Lifetime;
 using Unity;
 using InfastructureLayer.Repositories;
+using InfastructureLayer.Data.Repositories.IRepositories;
+using InfastructureLayer.Data.Repositories;
+using AutoMapper;
+using ServiceLayer;
 
 namespace FirstProgram1
 {
     internal static class Program
     {
+        public static IMapper Mapper { get; private set; }
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -15,15 +20,23 @@ namespace FirstProgram1
         {
             IUnityContainer UnityC = new UnityContainer();
 
-            UnityC.RegisterType<IProgramRepository, ProgramRepository>(new HierarchicalLifetimeManager());
+            UnityC.RegisterType<IUnitOfWork, UnitOfWork>(new HierarchicalLifetimeManager());
 
+            var mapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<MappingService>();
+            });
+            Mapper = mapperConfig.CreateMapper();
+
+            UnityC.RegisterInstance(Mapper);
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
-            var programRepository = UnityC.Resolve<IProgramRepository>();
+            var unitOfWork = UnityC.Resolve<IUnitOfWork>();
 
-            Application.Run(new Form1(programRepository));
+            Application.Run(new AppUserForm(unitOfWork));
         }
     }
 }

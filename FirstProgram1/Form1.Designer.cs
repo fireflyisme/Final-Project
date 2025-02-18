@@ -36,11 +36,11 @@
             tabPage3 = new TabPage();
             dataGridView1 = new DataGridView();
             panel1 = new Panel();
+            materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            materialMultiLineTextBox21 = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
             materialButton2 = new MaterialSkin.Controls.MaterialButton();
             materialButton1 = new MaterialSkin.Controls.MaterialButton();
             imageList1 = new ImageList(components);
-            materialMultiLineTextBox21 = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
-            materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             materialTabControl1.SuspendLayout();
             tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -125,6 +125,46 @@
             panel1.Size = new Size(1334, 50);
             panel1.TabIndex = 0;
             // 
+            // materialLabel1
+            // 
+            materialLabel1.AutoSize = true;
+            materialLabel1.Depth = 0;
+            materialLabel1.Dock = DockStyle.Right;
+            materialLabel1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel1.Location = new Point(986, 0);
+            materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel1.Name = "materialLabel1";
+            materialLabel1.Size = new Size(36, 19);
+            materialLabel1.TabIndex = 4;
+            materialLabel1.Text = "Filter";
+            // 
+            // materialMultiLineTextBox21
+            // 
+            materialMultiLineTextBox21.AnimateReadOnly = false;
+            materialMultiLineTextBox21.BackgroundImageLayout = ImageLayout.None;
+            materialMultiLineTextBox21.CharacterCasing = CharacterCasing.Normal;
+            materialMultiLineTextBox21.Depth = 0;
+            materialMultiLineTextBox21.Dock = DockStyle.Right;
+            materialMultiLineTextBox21.HideSelection = true;
+            materialMultiLineTextBox21.Hint = "Search here";
+            materialMultiLineTextBox21.Location = new Point(1022, 0);
+            materialMultiLineTextBox21.MaxLength = 32767;
+            materialMultiLineTextBox21.MouseState = MaterialSkin.MouseState.OUT;
+            materialMultiLineTextBox21.Name = "materialMultiLineTextBox21";
+            materialMultiLineTextBox21.PasswordChar = '\0';
+            materialMultiLineTextBox21.ReadOnly = false;
+            materialMultiLineTextBox21.ScrollBars = ScrollBars.None;
+            materialMultiLineTextBox21.SelectedText = "";
+            materialMultiLineTextBox21.SelectionLength = 0;
+            materialMultiLineTextBox21.SelectionStart = 0;
+            materialMultiLineTextBox21.ShortcutsEnabled = true;
+            materialMultiLineTextBox21.Size = new Size(312, 50);
+            materialMultiLineTextBox21.TabIndex = 3;
+            materialMultiLineTextBox21.TabStop = false;
+            materialMultiLineTextBox21.TextAlign = HorizontalAlignment.Left;
+            materialMultiLineTextBox21.UseSystemPasswordChar = false;
+            materialMultiLineTextBox21.TextChanged += materialMultiLineTextBox21_TextChanged;
+            // 
             // materialButton2
             // 
             materialButton2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -174,46 +214,6 @@
             imageList1.TransparentColor = Color.Transparent;
             imageList1.Images.SetKeyName(0, "dashboard.png");
             imageList1.Images.SetKeyName(1, "home-button.png");
-            // 
-            // materialMultiLineTextBox21
-            // 
-            materialMultiLineTextBox21.AnimateReadOnly = false;
-            materialMultiLineTextBox21.BackgroundImageLayout = ImageLayout.None;
-            materialMultiLineTextBox21.CharacterCasing = CharacterCasing.Normal;
-            materialMultiLineTextBox21.Depth = 0;
-            materialMultiLineTextBox21.Dock = DockStyle.Right;
-            materialMultiLineTextBox21.HideSelection = true;
-            materialMultiLineTextBox21.Hint = "Search here";
-            materialMultiLineTextBox21.Location = new Point(1022, 0);
-            materialMultiLineTextBox21.MaxLength = 32767;
-            materialMultiLineTextBox21.MouseState = MaterialSkin.MouseState.OUT;
-            materialMultiLineTextBox21.Name = "materialMultiLineTextBox21";
-            materialMultiLineTextBox21.PasswordChar = '\0';
-            materialMultiLineTextBox21.ReadOnly = false;
-            materialMultiLineTextBox21.ScrollBars = ScrollBars.None;
-            materialMultiLineTextBox21.SelectedText = "";
-            materialMultiLineTextBox21.SelectionLength = 0;
-            materialMultiLineTextBox21.SelectionStart = 0;
-            materialMultiLineTextBox21.ShortcutsEnabled = true;
-            materialMultiLineTextBox21.Size = new Size(312, 50);
-            materialMultiLineTextBox21.TabIndex = 3;
-            materialMultiLineTextBox21.TabStop = false;
-            materialMultiLineTextBox21.TextAlign = HorizontalAlignment.Left;
-            materialMultiLineTextBox21.UseSystemPasswordChar = false;
-            materialMultiLineTextBox21.TextChanged += materialMultiLineTextBox21_TextChanged;
-            // 
-            // materialLabel1
-            // 
-            materialLabel1.AutoSize = true;
-            materialLabel1.Depth = 0;
-            materialLabel1.Dock = DockStyle.Right;
-            materialLabel1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel1.Location = new Point(986, 0);
-            materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel1.Name = "materialLabel1";
-            materialLabel1.Size = new Size(36, 19);
-            materialLabel1.TabIndex = 4;
-            materialLabel1.Text = "Filter";
             // 
             // Form1
             // 

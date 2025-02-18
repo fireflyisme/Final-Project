@@ -1,6 +1,6 @@
 ﻿using FirstProgram1.Data;
 using FirstProgram1.Properties;
-using InfastructureLayer.Repositories;
+using InfastructureLayer.Data.Repositories.IRepositories;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using Unity.Injection;
@@ -10,10 +10,10 @@ namespace FirstProgram1
     public partial class Form1 : MaterialForm
     {
         private BindingSource bindingSource;
-        public readonly IProgramRepository dbContext;
+        public readonly IUnitOfWork dbContext;
         public bool isEdit = false;
         public DomainLayer.Models.Program ProgramEntity;
-        public Form1(IProgramRepository dbContext)
+        public Form1(IUnitOfWork dbContext)
         {
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -31,7 +31,7 @@ namespace FirstProgram1
 
         public void getPrograms()
         {
-            var programs = dbContext.GetAll();
+            var programs = dbContext.programRepository.GetAll();
             bindingSource.DataSource = programs;
             dataGridView1.DataSource = bindingSource;
         }
@@ -63,7 +63,7 @@ namespace FirstProgram1
         {
             ProgramEntity = (DomainLayer.Models.Program)bindingSource.Current;
 
-            dbContext.Remove(ProgramEntity);
+            dbContext.programRepository.Remove(ProgramEntity);
             dbContext.Save();
 
             MessageBox.Show("Program deleted successfully.");
@@ -73,7 +73,7 @@ namespace FirstProgram1
 
         private void materialMultiLineTextBox21_TextChanged(object sender, EventArgs e)
         {
-            dbContext.GetAll(c => c.ProgramName == materialMultiLineTextBox21.Text.Trim());
+            dbContext.programRepository.GetAll(c => c.ProgramName == materialMultiLineTextBox21.Text.Trim());
         }
 
         //private void exitToolStripMenuItem_Click(object sender, EventArgs e)

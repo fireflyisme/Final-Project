@@ -1,5 +1,5 @@
 ﻿using DomainLayer.Models;
-using InfastructureLayer.Repositories;
+using InfastructureLayer.Data.Repositories.IRepositories;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -15,12 +15,12 @@ namespace FirstProgram1
 {
     public partial class Form2 : MaterialForm
     {
-        public readonly IProgramRepository? dbContext;
+        public readonly IUnitOfWork? dbContext;
         internal Form1 Form1;
 
         public string message { get; internal set; }
 
-        public Form2(IProgramRepository? dbContext)
+        public Form2(IUnitOfWork? dbContext)
         {
             InitializeComponent();
             this.dbContext = dbContext;
@@ -36,7 +36,7 @@ namespace FirstProgram1
                 entity.Description = textBoxProgramDescription.Text;
                 entity.Department = textBoxProgramDepartment.Text;
 
-                dbContext.Update(entity);
+                dbContext.programRepository.Update(entity);
             }
             else
             {
@@ -47,7 +47,7 @@ namespace FirstProgram1
                     Department = textBoxProgramDepartment.Text,
                 };
 
-                dbContext.Add(entity);
+                dbContext.programRepository.Add(entity);
             }
             dbContext.Save();
 

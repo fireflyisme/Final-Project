@@ -1,11 +1,9 @@
 ﻿using DomainLayer.Models;
-using FirstProgram1.Data.Repositories;
 
-namespace InfastructureLayer.Repositories
+namespace InfastructureLayer.Data.Repositories.IRepositories
 {
     public interface IProgramRepository : IRepository<Program>
     {
         void Update(Program obj);
-        void Save();
     }
 }
