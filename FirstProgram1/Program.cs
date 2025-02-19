@@ -6,6 +6,8 @@ using InfastructureLayer.Data.Repositories.IRepositories;
 using InfastructureLayer.Data.Repositories;
 using AutoMapper;
 using ServiceLayer;
+using FirstProgram1.Views.IViews;
+using FirstProgram1.Presenters;
 
 namespace FirstProgram1
 {
@@ -35,8 +37,9 @@ namespace FirstProgram1
             Application.SetCompatibleTextRenderingDefault(false);
 
             var unitOfWork = UnityC.Resolve<IUnitOfWork>();
-
-            Application.Run(new AppUserForm(unitOfWork));
+            var appUserForm = new AppUserForm();
+            new AppUserFormPresenter(unitOfWork, appUserForm);
+            Application.Run(appUserForm);
         }
     }
 }

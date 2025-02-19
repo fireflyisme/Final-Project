@@ -31,10 +31,10 @@
             textBoxName = new MaterialSkin.Controls.MaterialTextBox2();
             textBoxUserName = new MaterialSkin.Controls.MaterialTextBox2();
             comboBoxProgram = new MaterialSkin.Controls.MaterialComboBox();
-            materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            buttonSaveUser = new MaterialSkin.Controls.MaterialButton();
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dataGridViewUsers = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).BeginInit();
             SuspendLayout();
             // 
             // textBoxName
@@ -118,57 +118,56 @@
             comboBoxProgram.StartIndex = 0;
             comboBoxProgram.TabIndex = 2;
             // 
-            // materialButton1
+            // buttonSaveUser
             // 
-            materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton1.Depth = 0;
-            materialButton1.HighEmphasis = true;
-            materialButton1.Icon = null;
-            materialButton1.Location = new Point(128, 350);
-            materialButton1.Margin = new Padding(4, 6, 4, 6);
-            materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton1.Name = "materialButton1";
-            materialButton1.NoAccentTextColor = Color.Empty;
-            materialButton1.Size = new Size(97, 36);
-            materialButton1.TabIndex = 3;
-            materialButton1.Text = "SAVE USER";
-            materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton1.UseAccentColor = false;
-            materialButton1.UseVisualStyleBackColor = true;
-            materialButton1.Click += materialButton1_Click;
+            buttonSaveUser.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            buttonSaveUser.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            buttonSaveUser.Depth = 0;
+            buttonSaveUser.HighEmphasis = true;
+            buttonSaveUser.Icon = null;
+            buttonSaveUser.Location = new Point(128, 350);
+            buttonSaveUser.Margin = new Padding(4, 6, 4, 6);
+            buttonSaveUser.MouseState = MaterialSkin.MouseState.HOVER;
+            buttonSaveUser.Name = "buttonSaveUser";
+            buttonSaveUser.NoAccentTextColor = Color.Empty;
+            buttonSaveUser.Size = new Size(97, 36);
+            buttonSaveUser.TabIndex = 3;
+            buttonSaveUser.Text = "SAVE USER";
+            buttonSaveUser.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            buttonSaveUser.UseAccentColor = false;
+            buttonSaveUser.UseVisualStyleBackColor = true;
             // 
             // sqlCommand1
             // 
             sqlCommand1.CommandTimeout = 30;
             sqlCommand1.EnableOptimizedParameterBinding = false;
             // 
-            // dataGridView1
+            // dataGridViewUsers
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(374, 86);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(747, 306);
-            dataGridView1.TabIndex = 4;
+            dataGridViewUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewUsers.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewUsers.BackgroundColor = Color.White;
+            dataGridViewUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewUsers.Location = new Point(374, 86);
+            dataGridViewUsers.Name = "dataGridViewUsers";
+            dataGridViewUsers.RowHeadersWidth = 51;
+            dataGridViewUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewUsers.Size = new Size(747, 306);
+            dataGridViewUsers.TabIndex = 4;
             // 
             // AppUserForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1183, 545);
-            Controls.Add(dataGridView1);
-            Controls.Add(materialButton1);
+            Controls.Add(dataGridViewUsers);
+            Controls.Add(buttonSaveUser);
             Controls.Add(comboBoxProgram);
             Controls.Add(textBoxUserName);
             Controls.Add(textBoxName);
             Name = "AppUserForm";
             Text = "AppUserForm";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -178,8 +177,8 @@
         private MaterialSkin.Controls.MaterialTextBox2 textBoxName;
         private MaterialSkin.Controls.MaterialTextBox2 textBoxUserName;
         private MaterialSkin.Controls.MaterialComboBox comboBoxProgram;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialButton buttonSaveUser;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewUsers;
     }
 }

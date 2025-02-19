@@ -12,5 +12,6 @@ namespace DomainLayer.ViewModels
         public string Name { get; set; }
         public string UserName { get; set; }
         public string Program { get; set; }
+        public Button Edit { get; set; }
     }
 }
