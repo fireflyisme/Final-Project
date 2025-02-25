@@ -1,6 +1,6 @@
 ﻿using DomainLayer.Models;
-using FirstProgram1.Data;
-using FirstProgram1.Data.Repositories;
+using Inventory1.Data;
+using Inventory1.Data.Repositories;
 using InfastructureLayer.Data.Repositories.IRepositories;
 
 namespace InfastructureLayer.Repositories

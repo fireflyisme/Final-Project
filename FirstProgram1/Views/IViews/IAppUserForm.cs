@@ -1,4 +1,4 @@
-﻿namespace FirstProgram1.Views.IViews
+﻿namespace Inventory1.Views.IViews
 {
     public interface IAppUserForm
     {

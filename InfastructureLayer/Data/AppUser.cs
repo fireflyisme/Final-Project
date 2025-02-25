@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FirstProgram1.Data
+namespace Inventory1.Data
 {
     public class AppUser : IdentityUser
     {
@@ -15,6 +15,6 @@ namespace FirstProgram1.Data
         public string? Name { get; set; }
         [ForeignKey(nameof(ProgramId))]
         public int? ProgramId { get; set; }
-        public virtual DomainLayer.Models.Program Program { get; set; }
+        public virtual DomainLayer.Models.Program Programs { get; set; }
     }
 }

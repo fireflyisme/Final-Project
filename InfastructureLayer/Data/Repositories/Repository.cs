@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace FirstProgram1.Data.Repositories
+namespace Inventory1.Data.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {

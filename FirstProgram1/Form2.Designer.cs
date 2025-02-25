@@ -1,4 +1,4 @@
-﻿namespace FirstProgram1
+﻿namespace Inventory1
 {
     partial class Form2
     {

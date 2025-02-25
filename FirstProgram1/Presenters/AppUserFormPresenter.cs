@@ -1,6 +1,6 @@
 ﻿using DomainLayer.ViewModels;
-using FirstProgram1.Data;
-using FirstProgram1.Views.IViews;
+using Inventory1.Data;
+using Inventory1.Views.IViews;
 using InfastructureLayer.Data.Repositories;
 using InfastructureLayer.Data.Repositories.IRepositories;
 using InfastructureLayer.Repositories;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FirstProgram1.Presenters
+namespace Inventory1.Presenters
 {
     public class AppUserFormPresenter
     {

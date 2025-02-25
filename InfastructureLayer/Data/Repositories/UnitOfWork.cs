@@ -1,4 +1,4 @@
-﻿using FirstProgram1.Data;
+﻿using Inventory1.Data;
 using InfastructureLayer.Data.Repositories.IRepositories;
 using InfastructureLayer.Repositories;
 using System;

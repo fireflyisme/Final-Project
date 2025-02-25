@@ -3,10 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstProgram1", "FirstProgram1\FirstProgram1.csproj", "{CA7B4DF4-451F-4277-90F3-AD4103B13830}"
-	ProjectSection(ProjectDependencies) = postProject
-		{FFDD456E-2770-400B-A6ED-D64B31A36FE4} = {FFDD456E-2770-400B-A6ED-D64B31A36FE4}
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory1", "FirstProgram1\Inventory1.csproj", "{CA7B4DF4-451F-4277-90F3-AD4103B13830}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{7A6029AE-EDF0-4866-9428-9F6BB5AA0E57}"
 EndProject

@@ -1,6 +1,6 @@
 ﻿using DomainLayer.ViewModels;
-using FirstProgram1.Data;
-using FirstProgram1.Views.IViews;
+using Inventory1.Data;
+using Inventory1.Views.IViews;
 using InfastructureLayer.Data.Repositories;
 using InfastructureLayer.Data.Repositories.IRepositories;
 using System;
@@ -13,7 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FirstProgram1
+namespace Inventory1
 {
     public partial class AppUserForm : Form, IAppUserForm
     {

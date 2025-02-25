@@ -1,4 +1,4 @@
-using FirstProgram1.Data;
+using Inventory1.Data;
 using Unity.Lifetime;
 using Unity;
 using InfastructureLayer.Repositories;
@@ -6,10 +6,10 @@ using InfastructureLayer.Data.Repositories.IRepositories;
 using InfastructureLayer.Data.Repositories;
 using AutoMapper;
 using ServiceLayer;
-using FirstProgram1.Views.IViews;
-using FirstProgram1.Presenters;
+using Inventory1.Views.IViews;
+using Inventory1.Presenters;
 
-namespace FirstProgram1
+namespace Inventory1
 {
     internal static class Program
     {

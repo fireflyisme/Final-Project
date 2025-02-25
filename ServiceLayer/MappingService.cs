@@ -2,7 +2,7 @@
 
 using AutoMapper;
 using DomainLayer.ViewModels;
-using FirstProgram1.Data;
+using Inventory1.Data;
 
 namespace ServiceLayer
 {
@@ -12,7 +12,7 @@ namespace ServiceLayer
         public MappingService()
         {
             CreateMap<AppUser, AppUserViewModel>()
-                .ForMember(destination => destination.Program, option => option.MapFrom(source => source.Program.ProgramName))
+                .ForMember(destination => destination.Program, option => option.MapFrom(source => source.Programs.ProgramName))
                 .ReverseMap();
         }
     }
